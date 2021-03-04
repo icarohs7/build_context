@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:build_context/build_context.dart';
+import 'package:flutter/material.dart';
 
 class FormPage extends StatelessWidget {
   @override
@@ -16,7 +16,7 @@ class FormPage extends StatelessWidget {
               children: <Widget>[
                 TextFormField(
                   validator: (text) {
-                    if (text.isEmpty) return 'Text cannot be empty';
+                    if ((text ?? '').isEmpty) return 'Text cannot be empty';
                     return null;
                   },
                 ),
