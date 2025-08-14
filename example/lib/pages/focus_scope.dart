@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:build_context/build_context.dart';
+import 'package:flutter/material.dart';
 
 class FocusScopePage extends StatelessWidget {
   @override
@@ -19,7 +19,7 @@ class FocusScopePage extends StatelessWidget {
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Click away from me...',
-                hintStyle: context.primaryTextTheme.subtitle1!
+                hintStyle: context.primaryTextTheme.titleMedium!
                     .copyWith(color: context.primaryColor),
               ),
             ),

@@ -21,7 +21,9 @@ extension MediaQueryExt on BuildContext {
 
   Brightness get platformBrightness => MediaQuery.of(this).platformBrightness;
 
-  double get textScaleFactor => MediaQuery.of(this).textScaleFactor;
+  double get textScaleFactor => MediaQuery.of(this).textScaler.scale(1.0);
+
+  TextScaler get textScaler => MediaQuery.of(this).textScaler;
 
   double get mediaQueryShortestSide => mediaQuerySize.shortestSide;
 
@@ -60,17 +62,17 @@ extension ThemeExt on BuildContext {
 
   TextTheme get primaryTextTheme => Theme.of(this).primaryTextTheme;
 
-  BottomAppBarTheme get bottomAppBarTheme => Theme.of(this).bottomAppBarTheme;
+  BottomAppBarThemeData get bottomAppBarTheme => Theme.of(this).bottomAppBarTheme;
 
   BottomSheetThemeData get bottomSheetTheme => Theme.of(this).bottomSheetTheme;
 
-  Color get backgroundColor => Theme.of(this).colorScheme.background;
+  Color get backgroundColor => Theme.of(this).colorScheme.surface;
 
   Color get primaryColor => Theme.of(this).primaryColor;
 
   Color get scaffoldBackgroundColor => Theme.of(this).scaffoldBackgroundColor;
 
-  AppBarTheme get appBarTheme => Theme.of(this).appBarTheme;
+  AppBarThemeData get appBarTheme => Theme.of(this).appBarTheme;
 
   TargetPlatform get platform => Theme.of(this).platform;
 

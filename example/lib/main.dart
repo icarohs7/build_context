@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.white24,
         primaryTextTheme: TextTheme(
-          headline6: TextStyle(color: Colors.blue),
+          titleLarge: TextStyle(color: Colors.blue),
         ),
       ),
       home: HomePage(),
@@ -46,14 +46,14 @@ class HomePage extends StatelessWidget {
                 onPressed: () => context.pushNamed(Routes.form),
                 child: Text(
                   'Form Example',
-                  style: context.primaryTextTheme.headline6,
+                  style: context.primaryTextTheme.titleLarge,
                 ),
               ),
               MaterialButton(
                 onPressed: () => context.pushNamed(Routes.focusScope),
                 child: Text(
                   'Focus Scope Example',
-                  style: context.primaryTextTheme.headline6,
+                  style: context.primaryTextTheme.titleLarge,
                 ),
               ),
             ],
